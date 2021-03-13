@@ -31,10 +31,16 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/open-iconic-bootstrap.min.css",
+              "src/assets/css/icomoon.css",
+              "src/assets/css/style.css",
+              "src/assets/css/icomoon.css",
               "src/styles.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"
             ]
           },
