@@ -42,6 +42,13 @@ export class RestrictionService {
     )
   }
 
+  addRestriction(restriction: Restriction): Observable<Restriction> {
+    return this.http.post<Restriction>(this.api + '/restriction', restriction, this.httpOptions).pipe(
+      tap((newRestriction: Restriction) => this.log(`Add New Restriction - id: ${newRestriction.id}`)),
+      catchError(this.handleError<Restriction>('addRestriction'))
+    )
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure

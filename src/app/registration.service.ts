@@ -43,6 +43,13 @@ export class RegistrationService {
     )
   }
 
+  addRegistration(registration: Registration): Observable<Registration> {
+    return this.http.post<Registration>(this.api + '/registration', registration, this.httpOptions).pipe(
+      tap((newRegistration: Registration) => this.log(`Add New Registration - id: ${newRegistration.id}`)),
+      catchError(this.handleError<Registration>('addRegistration'))
+    )
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure

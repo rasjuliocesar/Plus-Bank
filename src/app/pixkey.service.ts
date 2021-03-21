@@ -44,6 +44,13 @@ export class PixkeyService {
       )
   }
 
+  addPixkey(pixkey: Pixkey): Observable<Pixkey> {
+    return this.http.post<Pixkey>(this.api + '/pixkey', pixkey, this.httpOptions).pipe(
+      tap((newPixkey: Pixkey) => this.log(`Add New Pixkey - id: ${newPixkey.id}`)),
+      catchError(this.handleError<Pixkey>('addPixkey'))
+    )
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure

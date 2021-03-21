@@ -20,4 +20,19 @@ export class PixkeyComponent implements OnInit {
   getPixkey(): void {
     this.PixkeyService.getPixKey().subscribe((pixkey) => (this.pixs = pixkey))
   }
+
+  addPixkey(pixKey: string, bank: string, person: string):void {
+    pixKey = pixKey.trim()
+    bank = bank.trim()
+    person = person.trim();
+
+    if(!pixKey || !bank || !person) {
+      return;
+    }
+
+    this.PixkeyService.addPixkey({pixKey, bank, person} as Pixkey).subscribe((pixkey) => {
+      this.pixs.push(pixkey)
+    })
+  }
+
 }
