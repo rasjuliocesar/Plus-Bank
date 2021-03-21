@@ -3,3 +3,25 @@
 <br />
 <hr />
 <p>pixkey works!</p>
+
+<h2>Get All</h2>
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">PixKey</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Bank</th>
+            <th scope="col">Person</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pix of pixs">
+            <th scope="col">{{pix.id}}</th>
+            <th scope="col">{{pix.pixKey}}</th>
+            <th scope="col">{{pix.createdAt}}</th>
+            <th scope="col">{{pix.bank}}</th>
+            <th scope="col">{{pix.person}}</th>
+        </tr>
+    </tbody>
+</table>

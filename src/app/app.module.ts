@@ -7,6 +7,7 @@ import { AdminComponent } from './admin/admin.component';
 import { PixkeyComponent } from './pixkey/pixkey.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RestrictionComponent } from './restriction/restriction.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RestrictionComponent } from './restriction/restriction.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
