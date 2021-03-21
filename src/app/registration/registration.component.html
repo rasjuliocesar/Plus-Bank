@@ -3,3 +3,43 @@
 <br />
 <hr />
 <p>registration works!</p>
+
+<h2>Get All</h2>
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Zip Code</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Document</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Decision</th>
+            <th scope="col">Bank Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reg of registrations">
+            <th scope="col">{{reg.id}}</th>
+            <th scope="col">{{reg.fullName}}</th>
+            <th scope="col">{{reg.address}}</th>
+            <th scope="col">{{reg.zipCode}}</th>
+            <th scope="col">{{reg.state}}</th>
+            <th scope="col">{{reg.country}}</th>
+            <th scope="col">{{reg.birthDate}}</th>
+            <th scope="col">{{reg.document}}</th>
+            <th scope="col">{{reg.phone}}</th>
+            <th scope="col">{{reg.email}}</th>
+            <th scope="col">{{reg.salary}}</th>
+            <th scope="col">{{reg.createdAt}}</th>
+            <th scope="col">{{reg.decision}}</th>
+            <th scope="col">{{reg.bankCode}}</th>
+        </tr>
+    </tbody>
+</table>
